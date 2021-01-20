@@ -28,6 +28,14 @@ RUN sudo apt-get install -y powershell
 # Set up git
 RUN apt-get install -y git
 
+# Set up helm
+RUN apt-get install -y gnupg2
+RUN wget https://baltocdn.com/helm/signing.asc -O helm-sign.asc
+RUN sudo apt-key add helm-sign.asc
+RUN echo "deb https://baltocdn.com/helm/stable/debian/ all main" | sudo tee /etc/apt/sources.list.d/helm-stable-debian.list
+RUN sudo apt-get update
+RUN sudo apt-get install helm
+
 # Docker installation
 RUN set -eux; \
 	\

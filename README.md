@@ -10,14 +10,16 @@
 ## Environment
 
 * Ubuntu **20.04**
+
     * **dotnet** SDK 3.1
     * **asp.net core** runtime 3.1
     * **pwsh** (PowserShell 7)
     * **git**
     * **docker** 19.03.11
     * **docker-compose** 1.26.0
+    * **Helm 3**
     * **wget**
-
+    
 ## How to use
 
 ````bash
